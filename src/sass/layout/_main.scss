@@ -12,13 +12,21 @@ main {
 
 .scroll-section {
   padding-top: 50vh;
-  border: 3px solid red;
+  // border: 3px solid red;
 }
 
 #scroll-section-0 {
   h1 {
+    position: relative;
+    top: -10vh;
+    z-index: 5;
     font-size: 4rem;
     text-align: center;
+    color: rgba(255, 255, 255, 1);
+  }
+
+  .main-message {
+    color: rgba(255, 255, 255, 1);
   }
 }
 
@@ -112,6 +120,17 @@ main {
   // top: 0;
   left: 0;
   width: 100%;
+}
+
+.sticky-elem-canvas {
+  top: 0;
+  height: 100vh;
+
+  canvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
 }
 
 #show-scene-0 #scroll-section-0,

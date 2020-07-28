@@ -1,7 +1,5 @@
 import "./smoothscroll";
 import "./scrollControl";
-// import "./hamburger";
-// import "./menu";
 
 // if ('serviceWorker' in navigator) {
 //     window.addEventListener('load', function() {
