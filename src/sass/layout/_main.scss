@@ -108,7 +108,7 @@ main {
 
 .canvas-caption {
   max-width: 1000px;
-  margin: 0 auto;
+  margin: -20em auto 0;
   padding: 0 1rem;
   color: #888;
   font-size: 1.2rem;
@@ -169,6 +169,7 @@ main {
 
   .description {
     font-size: 2rem;
+    padding: 0;
 
     strong {
       font-size: 6rem;
@@ -193,10 +194,14 @@ main {
   }
 
   .mid-message {
+    width: 1000px;
     font-size: 4vw;
+    padding: 0;
   }
 
   .canvas-caption {
     font-size: 2rem;
+    margin: -3em auto 0;
+    padding: 0;
   }
 }
