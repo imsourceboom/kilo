@@ -1,3 +1,5 @@
+"use strict";
+
 (() => {
   let yOffset = 0; // window.pageYOffset 대신 쓸 변수
   let prevScrollHeight = 0; // 현재 스크롤 위치(yOffset)보다 이전에 위치한 스크롤 섹션들의 스크롤 높이갑의 합
@@ -113,6 +115,7 @@
     let imgElem;
     for (let i = 0; i < sceneInfo[0].values.videoImageCount; i++) {
       imgElem = new Image();
+      imgElem.decoding = `async`;
       imgElem.src = `/assets/images/videos/002/video_${1012 + i}.jpg`;
       sceneInfo[0].objs.videoImages.push(imgElem);
     }
@@ -126,6 +129,20 @@
   };
 
   setCanvasImages();
+
+  // const globalNav = document.querySelector(".global-nav");
+  // const navHeight = getComputedStyle(globalNav).height;
+  // const globalNavHeight = parseInt(
+  //   navHeight.substring(0, navHeight.length - 2)
+  // );
+
+  const checkMenu = () => {
+    if (yOffset > 44) {
+      document.body.classList.add("local-nav-sticky");
+    } else {
+      document.body.classList.remove("local-nav-sticky");
+    }
+  };
 
   const setLayout = () => {
     // 각 스클롤 섹션의 높이 세팅
@@ -493,8 +510,8 @@
           );
 
           objs.canvas.classList.add("sticky");
-          objs.canvas.style.top = `-${
-            (objs.canvas.height - objs.canvas.height * canvasScaleRatio) / 2
+          objs.canvas.style.top = `${
+            -(objs.canvas.height - objs.canvas.height * canvasScaleRatio) / 2
           }px`;
 
           if (scrollRatio > values.blendHeight[2].end) {
@@ -572,6 +589,7 @@
   window.addEventListener("scroll", () => {
     yOffset = window.pageYOffset;
     scrollLoop();
+    checkMenu();
   });
 
   window.addEventListener("load", () => {
