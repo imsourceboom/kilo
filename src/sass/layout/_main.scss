@@ -1,5 +1,9 @@
 body.before-load {
   overflow: hidden;
+
+  .container {
+    display: none;
+  }
 }
 
 main {
@@ -149,6 +153,7 @@ main {
 #show-scene-3 #scroll-section-3 {
   .sticky-elem {
     display: block;
+    will-change: transform, opacity;
   }
 }
 #show-scene-0 {
