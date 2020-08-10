@@ -58,9 +58,12 @@ html(lang="ko")
         //- script(src="https://polyfill.io/v3/polyfill.min.js?features=es5,es6,es7&flags=gated" async defer) 
         script(src="/js/app.js" defer) 
 
-    body
+    body.before-load
 
         //- include layout/header
+        .loading
+            svg.loading-circle
+                circle(cx='50%' cy="50%" r='25')
 
         main
             block main

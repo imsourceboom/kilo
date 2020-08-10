@@ -151,6 +151,21 @@ main {
     display: block;
   }
 }
+#show-scene-0 {
+  .global-nav,
+  .local-nav {
+    color: #fff;
+  }
+}
+
+#show-scene-1,
+#show-scene-2,
+#show-scene-3 {
+  .global-nav,
+  .local-nav {
+    color: rgba(29, 29, 31, 1);
+  }
+}
 
 @media (min-width: 1024px) {
   #scroll-section-0 {
