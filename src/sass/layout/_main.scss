@@ -26,11 +26,13 @@ main {
     z-index: 5;
     font-size: 4rem;
     text-align: center;
-    color: rgba(255, 255, 255, 1);
+    // color: rgba(255, 255, 255, 1);
   }
 
   .main-message {
-    color: rgba(255, 255, 255, 1);
+    &:last-child {
+      color: rgba(255, 255, 255, 1);
+    }
   }
 }
 
@@ -156,12 +158,12 @@ main {
     will-change: transform, opacity;
   }
 }
-#show-scene-0 {
-  .global-nav,
-  .local-nav {
-    color: #fff;
-  }
-}
+// #show-scene-0 {
+//   .global-nav,
+//   .local-nav {
+//     color: #fff;
+//   }
+// }
 
 #show-scene-1,
 #show-scene-2,

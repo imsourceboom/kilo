@@ -27,8 +27,8 @@
         videoImages: [],
       },
       values: {
-        videoImageCount: 170,
-        imageSequence: [0, 169],
+        videoImageCount: 156,
+        imageSequence: [0, 155],
         canvas_opacity: [1, 0, { start: 0.9, end: 1 }],
         messageA_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
         messageB_opacity_in: [0, 1, { start: 0.3, end: 0.4 }],
@@ -120,7 +120,7 @@
     for (let i = 0; i < sceneInfo[0].values.videoImageCount; i++) {
       imgElem = new Image();
       imgElem.decoding = `async`;
-      imgElem.src = `/assets/images/videos/002/video_${1012 + i}.jpg`;
+      imgElem.src = `/assets/images/videos/001/paint-${1001 + i}.jpg`;
       sceneInfo[0].objs.videoImages.push(imgElem);
     }
 
